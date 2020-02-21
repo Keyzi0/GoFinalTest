@@ -1,0 +1,16 @@
+https://godoc.org/github.com/gorilla/websocket
+https://golang.org
+https://stackoverflow.com/questions/20895552/how-to-read-from-standard-input-in-the-console
+https://stackoverflow.com/questions/38673673/access-http-response-as-string-in-go
+https://godoc.org/github.com/gorilla/websocket
+https://godoc.org/github.com/kisrobot/session/gorilla
+https://stackoverflow.com/questions/46399395/golang-to-redirect-fmt-scanf-to-read-from-file-instead-of-os-stdin
+https://stackoverflow.com/questions/38673673/access-http-response-as-string-in-go
+https://golang.org/pkg/os/
+https://coderwall.com/p/zyxyeg/golang-having-fun-with-os-stdin-and-shell-pipes
+https://yourbasic.org/golang/read-file-line-by-line/
+https://stackoverflow.com/questions/20895552/how-to-read-from-standard-input-in-the-console
+https://stackoverflow.com/questions/14694088/is-it-safe-for-more-than-one-goroutine-to-print-to-stdout
+https://stackoverflow.com/questions/55840399/golang-what-is-atomic-read-used-for
+https://tour.golang.org/concurrency/4
+https://golang.org/pkg/runtime/#NumGoroutine
