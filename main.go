@@ -50,12 +50,12 @@ func main() {
 				var cnt int32				
 				for {
 					url, status := <-chTask
-						if !status {
-							return
-						}
+					if !status {
+						return
+					}
 						cnt = webCounter(&client, url)
-						fmt.Println(`Count for`, url, `:`, cnt)
-						atomic.AddInt32(&finalSum, int32(cnt))
+					fmt.Printf("Count for %s: %d\n", url, cnt)
+					atomic.AddInt32(&finalSum, int32(cnt))
 				}
 			}()
 			workerCount++
