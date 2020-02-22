@@ -49,7 +49,7 @@ func main() {
 				var client http.Client
 				var cnt int32				
 				for {
-					url, status := <-chTask:
+					url, status := <-chTask
 						if !status {
 							return
 						}
