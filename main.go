@@ -47,17 +47,15 @@ func main() {
 			go func() {
 				defer wgWorkers.Done()
 				var client http.Client
-				var cnt int32
+				var cnt int32				
 				for {
-					select {
-					case url, status := <-chTask:
+					url, status := <-chTask:
 						if !status {
 							return
 						}
 						cnt = webCounter(&client, url)
 						fmt.Println(`Count for`, url, `:`, cnt)
 						atomic.AddInt32(&finalSum, int32(cnt))
-					}
 				}
 			}()
 			workerCount++
