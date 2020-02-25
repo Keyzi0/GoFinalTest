@@ -32,8 +32,17 @@ func webCounter(client *http.Client, url string) int32 {
 	return int32(cnt)
 }
 
+func chkStdinPipe() bool {
+	stat, _ := os.Stdin.Stat()
+	return (stat.Mode() & os.ModeCharDevice) == 0
+}
+
 func main() {
 	// fmt.Println(`Service started...`)
+	if !chkStdinPipe() {
+		fmt.Println("No data for execute...")
+		return
+	}
 	var finalSum int32
 	maxWorkersCnt := 5
 	workerCount := 0
