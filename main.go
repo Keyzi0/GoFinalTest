@@ -17,7 +17,8 @@ func webCounter(client *http.Client, url string) int32 {
 	cnt := 0
 	resp, err := client.Get(url)
 	if err != nil {
-		log.Fatal(err)
+		fmt.Fprintf(os.Stderr, "%s \n", err.Error())
+		return 0
 	}
 	defer resp.Body.Close()
 
@@ -47,13 +48,13 @@ func main() {
 			go func() {
 				defer wgWorkers.Done()
 				var client http.Client
-				var cnt int32				
+				var cnt int32
 				for {
 					url, status := <-chTask
 					if !status {
 						return
 					}
-						cnt = webCounter(&client, url)
+					cnt = webCounter(&client, url)
 					fmt.Printf("Count for %s: %d\n", url, cnt)
 					atomic.AddInt32(&finalSum, int32(cnt))
 				}
