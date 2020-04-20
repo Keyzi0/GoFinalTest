@@ -12,6 +12,8 @@ import (
 	"sync/atomic"
 )
 
+//here i wrote some awesome code and commited it
+
 //webCounter counts the "Go" string in the body of Get response
 func webCounter(client *http.Client, url string) int32 {
 	cnt := 0
